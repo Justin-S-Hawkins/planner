@@ -1,0 +1,246 @@
+/* General Layout */
+#app {
+  display: flex;
+  height: 100vh;
+
+  font-family: Arial, sans-serif;
+}
+
+/* Left Sidebar: Task Lists */
+#list-sidebar {
+  width: 20%;
+  padding: 10px;
+  background-color: rgb(37, 37, 37);
+}
+
+#task-lists {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+#honey-do {
+  font-size: 1.5em;
+  color: #ccc;
+}
+#honey-do strong {
+  color: rgb(238, 201, 122);
+}
+
+#task-lists li {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #ccc;
+  margin-bottom: 5px;
+  border: none;
+}
+
+#task-lists li:hover {
+  background-color: rgb(238, 201, 122);
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+}
+
+#task-lists button {
+  margin-left: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#new-list-btn,
+#daily-list-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  color: rgb(140, 144, 140);
+}
+
+button i:hover {
+  color: rgb(238, 201, 122);
+}
+h1,
+h2 {
+  color: #eaeaea;
+}
+
+/* Center: To-Do Section */
+
+#todo-section {
+  width: 60%;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgb(25, 25, 25);
+}
+main h2 {
+  color: #565656;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  width: 75%;
+  height: 4em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  font-size: 17px;
+  color: #ccc;
+}
+form button {
+  color: rgb(238, 201, 122);
+  background-color: rgb(25, 25, 25);
+  border: none;
+  font-size: 4.3em;
+  margin-left: 5px;
+}
+form button i:hover {
+  color: #565656;
+}
+
+#todo-items {
+  width: 70%;
+  justify-content: center;
+}
+
+#todo-items {
+  width: 76%;
+  margin-left: 0.9em;
+}
+
+#todo-items li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  height: 4em;
+  color: #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+#task-lists .active-list {
+  background-color: rgb(238, 201, 122);
+  font-weight: bold;
+  border-radius: 5px;
+  color: rgb(37, 37, 37);
+}
+
+/* Circle indicator styles */
+.todo-circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.todo-circle.completed {
+  background-color: green;
+  border-color: green;
+}
+
+.todo-circle.deleted {
+  background-color: red;
+  border-color: red;
+}
+
+/* Right Sidebar: Calendar Structure (not yet functional) */
+#calendar-sidebar {
+  width: 20%;
+  background-color: rgb(37, 37, 37);
+  padding: 10px;
+  padding-top: 2em;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ccc;
+}
+#calendar-header button {
+  border: none;
+  background-color: rgb(37, 37, 37);
+}
+#calendar-header button i {
+  color: #ccc;
+  padding: 10px;
+}
+#calendar-header button i:hover {
+  border-radius: 5px;
+  background-color: rgb(238, 201, 122);
+  color: rgb(37, 37, 37);
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.calendar-header div {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.day-header {
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+
+#calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.day-cell,
+.empty-cell {
+  height: 40px;
+  color: #ccc;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+.day-cell:hover {
+  background-color: rgb(238, 201, 122);
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+}
+
+.today {
+  background-color: rgb(238, 201, 122);
+  border-radius: 5px;
+  color: rgb(37, 37, 37);
+}
+
+.highlighted-day {
+  background-color: rgb(238, 201, 122);
+}
+
+.selected-day {
+  outline: 2px solid red;
+  background-color: #ffe0e0;
+}
+
+.has-todos {
+  background-color: #696969;
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+}

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    
+    <!-- Left Sidebar: Task List -->
+    <aside id="list-sidebar">
+      <div id="honey-do"><strong>Ⰶ</strong>HONEY-DO</div>
+      <h2>My Lists</h2>
+      <ul id="task-lists"></ul>
+
+      <button id="new-list-btn"><i class="fa-solid fa-plus"></i></button>
+      <button id = "daily-list-btn"><i class="fa-solid fa-house"></i></button>
+
+    </aside>
+
+    <!-- Center: To-Do List -->
+    <main id="todo-section">
+      <h1>I'm not procrastinating, you are!</h1>
+      <h2 id="active-list-title">Select a List</h2>
+      <form id="todo-form">
+        <input type="text" id="new-todo-input" placeholder="Add Todo" />
+        <button type="submit"><i class="fa-solid fa-square-plus"></i></button>
+      </form>
+      <ul id="todo-items"></ul>
+   
+    </main>
+
+    <!-- Right Sidebar: Calendar (Structure only for now) -->
+    <aside id="calendar-sidebar">
+      <div id="calendar-header">
+        <button id="prev-month"><i class="fa-solid fa-arrow-left"></i></button>
+        <span id="month-year"></span>
+        <button id="next-month"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="calendar-header">
+        <div>S</div>
+        <div>M</div>
+        <div>T</div>
+        <div>W</div>
+        <div>T</div>
+        <div>F</div>
+        <div>S</div>
+      </div>
+      <div id="calendar-grid"></div>
+    </aside>
+
+  </div>
+<!-- 
+  <script src="planner.js"></script>
+  <script src ="calendar.js"></script> -->
+<script type="module" src="main.js"></script>
+  <script src="https://kit.fontawesome.com/a3b6dc3996.js" crossorigin="anonymous"></script>
+</body>
+</html
