@@ -1,0 +1,7 @@
+-WHATS DOING WHAT- sections 1-11 
+
+🟦 section 1 DOM Element Reference
+using "document.getElementbyId()" to grab elements in the DOM
+
+creating the let variables we'll use for creating, maintaining, and displaying our lists
+lists, virtualLists, activeListId, and currentDate

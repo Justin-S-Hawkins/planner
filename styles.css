@@ -1,4 +1,4 @@
-/* General Layout */
+/* General Layout*/
 #app {
   display: flex;
   height: 100vh;
@@ -169,6 +169,7 @@ form button i:hover {
   align-items: center;
   color: #ccc;
 }
+
 #calendar-header button {
   border: none;
   background-color: rgb(37, 37, 37);
