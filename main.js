@@ -1,4 +1,4 @@
-//🟦 1. DOM Element References & Global State
+//🟦 1. DOM Element References
 // References to key HTML elements you'll mamipulate
 //The main application state variables lists,activeListId,and currentDate
 const taskLists = document.getElementById("task-lists");
@@ -51,7 +51,8 @@ function renderLists() {
     li.dataset.id = list.id;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
+    deleteBtn.textContent = "✖";
+    deleteBtn.classList.add("delete-btn");
     deleteBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       const wasActive = activeListId === list.id;

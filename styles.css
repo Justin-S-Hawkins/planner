@@ -50,6 +50,12 @@
   cursor: pointer;
 }
 
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  color: rgb(37, 37, 37);
+}
+
 #new-list-btn,
 #daily-list-btn {
   margin-top: 10px;
@@ -233,11 +239,6 @@ form button i:hover {
 
 .highlighted-day {
   background-color: rgb(238, 201, 122);
-}
-
-.selected-day {
-  outline: 2px solid red;
-  background-color: #ffe0e0;
 }
 
 .has-todos {
