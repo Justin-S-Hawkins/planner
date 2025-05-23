@@ -11,7 +11,7 @@
   <div id="app">
     
     <!-- Left Sidebar: Task List -->
-    <aside id="list-sidebar">
+    <aside class="responsive-1060-hidden" id="list-sidebar">
       <div id="honey-do"><strong>Ⰶ</strong>HONEY-DO</div>
       <h2>My Lists</h2>
       <ul id="task-lists"></ul>
@@ -23,7 +23,7 @@
 
     <!-- Center: To-Do List -->
     <main id="todo-section">
-      <h1>I'm not procrastinating, you are!</h1>
+      <h1>Lets Have A Productive Day!</h1>
       <h2 id="active-list-title">Select a List</h2>
       <form id="todo-form">
         <input type="text" id="new-todo-input" placeholder="Add Todo" />
@@ -43,6 +43,15 @@
       <div class="calendar-header">
       </div>
       <div id="calendar-grid"></div>
+      <aside class="responsive-over1060-hidden" id="list-sidebar">
+      <div id="honey-do"><strong>Ⰶ</strong>HONEY-DO</div>
+      <h2>My Lists</h2>
+      <ul id="task-lists"></ul>
+
+      <button id="new-list-btn"><i class="fa-solid fa-plus"></i></button>
+      <button id = "daily-list-btn"><i class="fa-solid fa-house"></i></button>
+
+    </aside>
     </aside>
 
   </div>

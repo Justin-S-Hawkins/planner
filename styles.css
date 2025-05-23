@@ -64,7 +64,7 @@
   cursor: pointer;
   border: none;
   background-color: rgb(37, 37, 37);
-  color: rgb(140, 144, 140);
+  color: rgb(238, 201, 122);
 }
 
 button i:hover {
@@ -83,6 +83,7 @@ h2 {
   overflow-y: auto;
   background-color: rgb(25, 25, 25);
 }
+
 main h2 {
   color: #565656;
 }
@@ -100,6 +101,7 @@ form input {
   background-color: rgb(37, 37, 37);
   font-size: 17px;
   color: #ccc;
+  padding-left: 1.2em;
 }
 form button {
   color: rgb(238, 201, 122);
@@ -112,26 +114,27 @@ form button i:hover {
   color: #565656;
 }
 
-#todo-items {
-  width: 70%;
-  justify-content: center;
-}
-
-#todo-items {
-  width: 76%;
-  margin-left: 0.9em;
-}
-
 #todo-items li {
   margin-bottom: 15px;
-  display: flex;
-  align-items: center;
   background-color: rgb(37, 37, 37);
   height: 4em;
   color: #ccc;
   border-radius: 5px;
-  padding-left: 5px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  width: 82.5%;
 }
+
+#todo-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-width: fit-content;
+}
+
 #task-lists .active-list {
   background-color: rgb(238, 201, 122);
   font-weight: bold;
@@ -245,4 +248,46 @@ form button i:hover {
   background-color: #696969;
   color: rgb(37, 37, 37);
   border-radius: 5px;
+}
+
+.responsive-over1060-hidden {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  /*make left list panel turn into a 3 line icon, in top left hand corner, and the center shifts over withe
+  the calendar,*/
+
+  .responsive-1060-hidden {
+    display: none;
+  }
+  .responsive-over1060-hidden {
+    display: block;
+  }
+
+  #calendar-sidebar {
+    width: 40%;
+    padding-top: 3em;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #new-todo-input {
+    width: 20em;
+  }
+  #todo-items {
+    width: 100%;
+    padding-left: 0;
+  }
+  #todo-items li {
+    width: 23em;
+    min-width: fit-content;
+  }
+  #todo-section {
+    padding-left: 12%;
+  }
 }
