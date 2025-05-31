@@ -125,9 +125,15 @@ function renderTodos() {
       } else if (todo.deleted) {
         todoText.style.opacity = "0.5";
       }
+      const todoEdit = document.createElement("span");
+      todoEdit.classList.add("todo-edit");
+      todoEdit.textContent = "⋯";
+
+      //add click event... and transitions for editing or deleting
 
       li.appendChild(circle);
       li.appendChild(todoText);
+      li.appendChild(todoEdit);
       todoItems.appendChild(li);
     });
   }
@@ -245,18 +251,21 @@ function renderCalendar(date) {
       const dateObj = new Date(year, month, day);
       const weekday = dateObj.toLocaleDateString("en-US", { weekday: "long" });
       const formatted = `${weekday} ${day}`;
+      const createListName = prompt("create List Name");
 
-      const existingList = lists.find((list) => list.created === dateStr);
-      if (existingList) {
-        activeListId = existingList.id;
-        activeListTitle.textContent = existingList.name;
+      if (found) {
+        //<------- null when prompt isn't entered
+        activeListId = found.id;
+        activeListTitle.textContent = found.created;
       } else {
         activeListId = dateStr;
         activeListTitle.textContent = formatted;
         if (!virtualLists[dateStr]) {
           virtualLists[dateStr] = {
             id: dateStr,
-            name: formatted,
+            name: !createListName
+              ? formatted
+              : `${formatted}: ${createListName} `,
             todos: [],
             created: dateStr,
           };

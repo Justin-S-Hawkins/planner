@@ -87,14 +87,21 @@ h2 {
 main h2 {
   color: #565656;
 }
+/* .input-todo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+} */
 
 form {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 form input {
-  width: 75%;
+  width: 100%;
   height: 4em;
   border-radius: 5px;
   border: none;
@@ -123,7 +130,7 @@ form button i:hover {
   list-style-type: none;
   display: flex;
   align-items: center;
-  width: 82.5%;
+  width: 100%;
 }
 
 #todo-items {
@@ -131,8 +138,7 @@ form button i:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
-  min-width: fit-content;
+  padding-left: 0;
 }
 
 #task-lists .active-list {
@@ -152,6 +158,7 @@ form button i:hover {
   margin-right: 10px;
   vertical-align: middle;
   cursor: pointer;
+  margin-left: 0.5em;
 }
 
 .todo-circle.completed {
@@ -162,6 +169,19 @@ form button i:hover {
 .todo-circle.deleted {
   background-color: red;
   border-color: red;
+}
+
+.todo-edit {
+  font-size: 2.5em;
+  margin-left: auto;
+  padding-right: 0.5em;
+  cursor: pointer;
+}
+.todo-edit:hover {
+  color: rgb(238, 201, 122);
+}
+.todo-edit-menu {
+  display: none;
 }
 
 /* Right Sidebar: Calendar Structure (not yet functional) */

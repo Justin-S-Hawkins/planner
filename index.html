@@ -25,15 +25,17 @@
     <main id="todo-section">
       <h1>Lets Have A Productive Day!</h1>
       <h2 id="active-list-title">Select a List</h2>
-      <form id="todo-form">
+     <!-- <div class="input-todo-container"> -->
+       <form id="todo-form">
         <input type="text" id="new-todo-input" placeholder="Add Todo" />
-        <button type="submit"><i class="fa-solid fa-square-plus"></i></button>
+        <!-- <button type="submit"><i class="fa-solid fa-square-plus"></i></button> -->
       </form>
       <ul id="todo-items"></ul>
+     <!-- </div> -->
    
     </main>
 
-    <!-- Right Sidebar: Calendar (Structure only for now) -->
+    <!-- Right Sidebar: Calendar -->
     <aside id="calendar-sidebar">
       <div id="calendar-header">
         <button id="prev-month"><i class="fa-solid fa-arrow-left"></i></button>
@@ -41,6 +43,8 @@
         <button id="next-month"><i class="fa-solid fa-arrow-right"></i></button>
       </div>
       <div class="calendar-header">
+        <div>
+        </div>
       </div>
       <div id="calendar-grid"></div>
       <aside class="responsive-over1060-hidden" id="list-sidebar">
@@ -57,7 +61,7 @@
   </div>
 
  
-  <script src="main.js"></script>
+  <script src="main.js".js"></script>
 
   <script src="https://kit.fontawesome.com/a3b6dc3996.js" crossorigin="anonymous"></script>
 </body>
