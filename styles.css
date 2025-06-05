@@ -131,6 +131,7 @@ form button i:hover {
   display: flex;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 #todo-items {
@@ -180,8 +181,37 @@ form button i:hover {
 .todo-edit:hover {
   color: rgb(238, 201, 122);
 }
-.todo-edit-menu {
+.icon-container {
   display: none;
+  margin-left: 10px;
+}
+
+.icon-container button {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  background-color: rgb(238, 201, 122);
+  border: none;
+  margin-right: 0.3em;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+}
+.icon-container button:hover {
+  background-color: rgb(75, 74, 74);
+  color: rgb(238, 201, 122);
+}
+.edit-input {
+  font-size: 1rem;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  background-color: rgb(37, 37, 37);
+  z-index: 2;
+  width: 55%;
 }
 
 /* Right Sidebar: Calendar Structure (not yet functional) */
